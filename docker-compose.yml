@@ -1,0 +1,7 @@
+services:
+  salone-app:
+    build: .
+    image: salone-app:v1
+    container_name: salone-container
+    ports:
+      - "8080:80"

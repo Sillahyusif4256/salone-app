@@ -1,0 +1,7 @@
+flowchart LR
+    Developer --> GitHub
+    GitHub -->|"git clone"| WSL["git clone in WSL Ubuntu"]
+    WSL -->|"docker build"| Build["Docker build"]
+    Build --> Container["Container (8080)"]
+    Container -->|"HTTP to host port 8080"| Nginx["Nginx reverse proxy (80)"]
+    Nginx --> Browser["Browser at localhost"]
